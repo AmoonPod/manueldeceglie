@@ -71,6 +71,7 @@ export default function Home() {
     >
       <Head>
         <title>Manuel De Ceglie</title>
+        <link rel="shortcut icon" href="/Logo.ico" />
       </Head>
       <motion.div
         className="  absolute left-0 top-0 w-4 h-4 rounded-2xl  bg-gradient-to-r from-[#00EAFF] via-[#fbc2eb] to-[#a6c1ee] text-transparent bg-grosso animate-[wiggle_1s_ease-in-out_infinite] "
