@@ -1,7 +1,22 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import "../styles/globals.css";
-
+useEffect;
 function MyApp({ Component, pageProps, router }) {
+  useEffect(() => {
+    const threeScript = document.createElement("script");
+    threeScript.setAttribute("id", "threeScript");
+    threeScript.setAttribute(
+      "src",
+      "https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"
+    );
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+    return () => {
+      if (threeScript) {
+        threeScript.remove();
+      }
+    };
+  }, []);
   return (
     <motion.div
       key={router.route}
@@ -18,7 +33,7 @@ function MyApp({ Component, pageProps, router }) {
         pageAnimate: {
           opacity: 1,
           transition: {
-            duration: 1.5,
+            duration: 2,
             ease: "easeInOut",
           },
         },

@@ -1,4 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:wght@100&family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* background: #00416A;  /* fallback for old browsers 
+background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+ */
+
+/*  background: #CC95C0;  fallback for old browsers 
+background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);   Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+
+/* background: #1F1C2C;   fallback for old browsers 
+background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+ */
+/* background: #757F9A;  fallback for old browsers 
+ background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);   Chrome 10-25, Safari 5.1-6 
+ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+
+/*  background: #24C6DC;  fallback for old browsers 
+background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+/* 
+background-image: radial-gradient(
+  circle farthest-corner at 92.3% 71.5%,
+  rgba(83, 138, 214, 1) 0%,
+  rgba(134, 231, 214, 1) 90%
+); */
+
+@font-face {
+  font-family: "AZONIX";
+  src: url("../public/fonts/Azonix.otf");
+}
