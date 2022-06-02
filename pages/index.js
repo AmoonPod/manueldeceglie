@@ -1,12 +1,15 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import manuel from "../public/manuel.png";
+import Instagram from "../public/instagram.png";
+import manuel_gang from "../public/manuel_gang.jpg";
 import { useEffect, useRef } from "react";
 import FOG from "vanta/dist/vanta.fog.min";
 import * as THREE from "three";
 import React, { useState } from "react";
-
+import Logo from "../public/Logo.png";
 export default function Home() {
   var highlightColor = "#fbc2eb";
   var midtoneColor = "#00EAFF";
@@ -66,13 +69,14 @@ export default function Home() {
 
   return (
     <div
-      className="flex justify-center select-none overflow-hidden cursor-none"
+      className=" justify-center flex select-none overflow-hidden cursor-none"
       ref={vantaRef}
     >
       <Head>
         <title>Manuel De Ceglie</title>
         <link rel="shortcut icon" href="/Logo.ico" />
       </Head>
+
       <motion.div
         className="  absolute left-0 top-0 w-4 h-4 rounded-2xl  bg-gradient-to-r from-[#00EAFF] via-[#fbc2eb] to-[#a6c1ee] text-transparent bg-grosso animate-[wiggle_1s_ease-in-out_infinite] "
         style={{
@@ -91,16 +95,19 @@ export default function Home() {
             <div className="flex justify-center ">
               <div className="relative">
                 <motion.div
-                  /* drag
-                  dragConstraints={{
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                  }} */
+                  style={{
+                    height: imageLoading ? "256px" : "auto",
+                    borderRadius: 30,
+                    backgroundColor: "#fff",
+                  }}
+                  drag
+                  dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+                  dragTransition={{
+                    bounceStiffness: 2000,
+                    bounceDamping: 15,
+                  }}
                   className="lg: w-[256px]"
                   initial={{ height: "256px", opacity: 0 }}
-                  style={{ height: imageLoading ? "256px" : "auto" }}
                   animate={{
                     height: imageLoading ? "256px" : "auto",
                     opacity: imageLoading ? 1 : 1,
@@ -113,10 +120,9 @@ export default function Home() {
                     scale: 1.2,
                     transition: { duration: 0.5 },
                   }}
-                  whileTap={{ scale: 0.9 }}
                 >
                   <Image
-                    src={manuel}
+                    src={manuel_gang}
                     layout="intrinsic"
                     width={500}
                     height={500}
@@ -145,6 +151,61 @@ export default function Home() {
                 FRONT-END DEVELOPER
               </h3>
             </div>
+            {/* <motion.div
+              className=" w-10 h-10 bg-white flex justify-center rounded-full"
+              initial={{ x: -200 }}
+              animate={{ x: 200 }}
+              transition={{
+                type: "spring",
+                repeat: Infinity,
+                repeatType: "mirror",
+                repeatDelay: 0.1,
+              }}
+            /> */}
+            {/* <motion.ul className="flex justify-evenly mt-2">
+              <li>
+                <a href="https://www.instagram.com/manudeceglie">
+                  <Image
+                    src={Instagram}
+                    layout="intrinsic"
+                    width={64}
+                    height={64}
+                    alt="Manuel De Ceglie"
+                    className=""
+                    draggable={false}
+                    style={{ cursor: "none" }}
+                  ></Image>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/manudeceglie">
+                  <Image
+                    src={Instagram}
+                    layout="intrinsic"
+                    width={64}
+                    height={64}
+                    alt="Manuel De Ceglie"
+                    className=""
+                    draggable={false}
+                    style={{ cursor: "none" }}
+                  ></Image>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/manudeceglie">
+                  <Image
+                    src={Instagram}
+                    layout="intrinsic"
+                    width={64}
+                    height={64}
+                    alt="Manuel De Ceglie"
+                    className=""
+                    draggable={false}
+                    style={{ cursor: "none" }}
+                  ></Image>
+                </a>
+              </li>
+            </motion.ul> */}
           </motion.div>
         </div>
       </main>
